@@ -1,26 +1,25 @@
 //
-//  TrioleView.swift
-//  Triole (iOS)
+//  RootView.swift
+//  Triole (macOS)
 //
-//  Created by Alejandro Martinez Montero on 17/12/21.
+//  Created by Alejandro Martinez Montero on 22/1/22.
 //
 
 import SwiftUI
 
-enum NavigationItem {
-    case all
-    case favorites
-}
 
-struct TrioleView: View {
-    @ObservedObject var radio: RadioController
+
+struct RootView: View {
+    @ObservedObject var radioStationManagmentObject: RadioController
+    
     @State var selection: NavigationItem? = .all
-    #if os(macOS)
+    
+    // sideBar as a variable. Has to be added to main View
     var sideBar: some View {
         List(selection: $selection) {
             NavigationLink(
                 destination:  Button("click") {
-                    radio.requestData()
+                    self.radioStationManagmentObject.requestData()
                 },
               tag: NavigationItem.all,
               selection: $selection
@@ -47,47 +46,21 @@ struct TrioleView: View {
             }
         }
     }
-    #endif
-    
     var body: some View {
-        #if os(iOS)
-        TabView {
-            NavigationView {
-                Button("Press") {
-                    print("pressing button")
-                    self.radio.requestData()
-                }
-            }
-            .tabItem {
-                Label("Home", systemImage: "house")
-            }
-            
-            NavigationView {
-                
-            }
-            .tabItem {
-                Label("Search", systemImage: "magnifyingglass.circle.fill")
-            }
-        }
-        #elseif os(macOS)
         NavigationView {
-            sideBar
-            Text("You can do it")
+            self.sideBar
         }
-
-        #endif
     }
     
-
-    #if os(macOS)
     func toggleSideBar() {
         NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar), with: nil)
     }
-    #endif
+    
+    
 }
 
-struct TrioleView_Previews: PreviewProvider {
+struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        TrioleView(radio: RadioController())
+        RootView(radioStationManagmentObject: RadioController())
     }
 }

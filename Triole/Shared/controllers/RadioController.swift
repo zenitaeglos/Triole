@@ -15,6 +15,8 @@ struct RadioStation: Codable {
 class RadioController: ObservableObject {
     var network: NetworkConnection
     
+    @Published var radioStationsList: [RadioStation] = []
+    
     init() {
         network = NetworkConnection()
         network.delegate = self
@@ -30,6 +32,9 @@ extension RadioController: NetworkConnectionProtocol {
     func didReceiveRequest(request data: Data) {
         let radioStations = try? JSONDecoder().decode([RadioStation].self, from: data)
         print(radioStations ??  "one")
+        if let radioStations = radioStations {
+            self.radioStationsList = radioStations
+        }
         /*
         print("\(data.count)")
         let xxx = ByteCountFormatter()

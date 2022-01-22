@@ -15,9 +15,11 @@ struct TrioleApp: App {
     var body: some Scene {
         WindowGroup {
             //TrioleViewRename()
-            TrioleView(radio: radioController)
-                .environment(\.managedObjectContext,
-                             persistenceController.container.viewContext)
+            RootView(radioStationManagmentObject: radioController)
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            //TrioleView(radio: radioController)
+            //    .environment(\.managedObjectContext,
+            //                 persistenceController.container.viewContext)
             /*
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
