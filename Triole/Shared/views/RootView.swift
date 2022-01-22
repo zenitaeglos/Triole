@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RootView: View {
     @ObservedObject var radioStationManagmentObject: RadioController
+    
     var body: some View {
         TabView {
             /*
@@ -18,27 +19,36 @@ struct RootView: View {
                     self.radioStationManagmentObject.requestData()
                 }
              */
-            Text("hi")
+            
             //}
-
+            NavigationView {
+                List {
+                    NavigationLink(destination:     Text("hola")) {
+                        Text("is iths correct")
+                    }
+                }
+                .navigationTitle("Home")
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
             .tabItem {
                 Label("Home", systemImage: "house")
             }
+            .tag(0)
 
-            
             NavigationView {
                 Button("i dont know") {
                     
                 }
              
             }
+            .navigationViewStyle(StackNavigationViewStyle())
              
                 
             .tabItem {
                 Label("Search", systemImage: "magnifyingglass.circle.fill")
             }
+            .tag(2)
         }
-        
     }
 }
 

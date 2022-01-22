@@ -46,6 +46,7 @@ struct RootView: View {
             }
         }
     }
+    
     var body: some View {
         NavigationView {
             self.sideBar
