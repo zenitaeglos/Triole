@@ -10,17 +10,9 @@ import SwiftUI
 struct RootView: View {
     @ObservedObject var radioStationManagmentObject: RadioController
     
+    @State private var text = ""
     var body: some View {
         TabView {
-            /*
-            NavigationView {
-                Button("Press") {
-                    print("pressing button")
-                    self.radioStationManagmentObject.requestData()
-                }
-             */
-            
-            //}
             NavigationView {
                 List {
                     NavigationLink(destination:     Text("hola")) {
@@ -35,12 +27,7 @@ struct RootView: View {
             }
             .tag(0)
 
-            NavigationView {
-                Button("i dont know") {
-                    
-                }
-             
-            }
+            SearchView(searchTitle: "Search", text: $text)
             .navigationViewStyle(StackNavigationViewStyle())
              
                 

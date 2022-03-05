@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D906621827D3D6EC0089B29A /* RadioCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D906621727D3D6EC0089B29A /* RadioCodable.swift */; };
+		D906621927D3D6EC0089B29A /* RadioCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D906621727D3D6EC0089B29A /* RadioCodable.swift */; };
 		D90F46D9279B1ABA0034E966 /* TrioleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997D551276D405E00366577 /* TrioleView.swift */; };
 		D912FFC1276DD934005FF207 /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912FFC0276DD934005FF207 /* NetworkConnection.swift */; };
 		D912FFC2276DD934005FF207 /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912FFC0276DD934005FF207 /* NetworkConnection.swift */; };
@@ -26,11 +28,14 @@
 		D997D555276D40AF00366577 /* TrioleViewRename.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997D554276D40AF00366577 /* TrioleViewRename.swift */; };
 		D99B4336279BEC1100276DF2 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B4335279BEC1100276DF2 /* RootView.swift */; };
 		D99B4338279BEC4300276DF2 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B4337279BEC4300276DF2 /* RootView.swift */; };
+		D99B433A279C310C00276DF2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B4339279C310C00276DF2 /* SearchView.swift */; };
+		D99B433B279C310C00276DF2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B4339279C310C00276DF2 /* SearchView.swift */; };
 		D9F97BD9276D49AD0064C158 /* RadioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F97BD8276D49AD0064C158 /* RadioController.swift */; };
 		D9F97BDA276D49AD0064C158 /* RadioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F97BD8276D49AD0064C158 /* RadioController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D906621727D3D6EC0089B29A /* RadioCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioCodable.swift; sourceTree = "<group>"; };
 		D912FFC0276DD934005FF207 /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
 		D912FFC4276DE37D005FF207 /* ConfigRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigRadio.swift; sourceTree = "<group>"; };
 		D997D529276D3B5500366577 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
@@ -45,6 +50,7 @@
 		D997D554276D40AF00366577 /* TrioleViewRename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrioleViewRename.swift; sourceTree = "<group>"; };
 		D99B4335279BEC1100276DF2 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D99B4337279BEC4300276DF2 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		D99B4339279C310C00276DF2 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D9F97BD8276D49AD0064C158 /* RadioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				D912FFC4276DE37D005FF207 /* ConfigRadio.swift */,
+				D906621727D3D6EC0089B29A /* RadioCodable.swift */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -130,6 +137,7 @@
 			children = (
 				D997D551276D405E00366577 /* TrioleView.swift */,
 				D99B4335279BEC1100276DF2 /* RootView.swift */,
+				D99B4339279C310C00276DF2 /* SearchView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -249,10 +257,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D99B433A279C310C00276DF2 /* SearchView.swift in Sources */,
 				D997D53D276D3B5700366577 /* TrioleApp.swift in Sources */,
 				D912FFC5276DE37D005FF207 /* ConfigRadio.swift in Sources */,
 				D997D541276D3B5700366577 /* Persistence.swift in Sources */,
 				D997D53B276D3B5700366577 /* Triole.xcdatamodeld in Sources */,
+				D906621827D3D6EC0089B29A /* RadioCodable.swift in Sources */,
 				D997D53F276D3B5700366577 /* ContentView.swift in Sources */,
 				D99B4336279BEC1100276DF2 /* RootView.swift in Sources */,
 				D912FFC1276DD934005FF207 /* NetworkConnection.swift in Sources */,
@@ -271,10 +281,12 @@
 				D90F46D9279B1ABA0034E966 /* TrioleView.swift in Sources */,
 				D99B4338279BEC4300276DF2 /* RootView.swift in Sources */,
 				D997D53C276D3B5700366577 /* Triole.xcdatamodeld in Sources */,
+				D906621927D3D6EC0089B29A /* RadioCodable.swift in Sources */,
 				D997D540276D3B5700366577 /* ContentView.swift in Sources */,
 				D912FFC2276DD934005FF207 /* NetworkConnection.swift in Sources */,
 				D997D555276D40AF00366577 /* TrioleViewRename.swift in Sources */,
 				D9F97BDA276D49AD0064C158 /* RadioController.swift in Sources */,
+				D99B433B279C310C00276DF2 /* SearchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

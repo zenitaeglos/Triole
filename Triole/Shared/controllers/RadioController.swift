@@ -7,8 +7,14 @@
 
 import Foundation
 
-struct RadioStation: Codable {
+struct RadioStationOld: Codable {
     var name: String
+    var favicon: String
+    var url: String
+    var url_resolved: String
+    var stationuuid: String
+    var homepage: String
+    var countrycode: String
 }
 
 
@@ -23,6 +29,7 @@ class RadioController: ObservableObject {
     }
     
     func requestData() {
+        //https://nl1.api.radio-browser.info/json/stations/byname/ser
         self.network.getRequest(url: "https://de1.api.radio-browser.info/json/stations/byname/ser")
     }
 }

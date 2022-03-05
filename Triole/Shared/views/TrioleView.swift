@@ -7,11 +7,8 @@
 
 import SwiftUI
 
-enum NavigationItem {
-    case all
-    case favorites
-}
-
+//TODO delete this file
+/*
 struct TrioleView: View {
     @ObservedObject var radio: RadioController
     @State var selection: NavigationItem? = .all
@@ -91,3 +88,4 @@ struct TrioleView_Previews: PreviewProvider {
         TrioleView(radio: RadioController())
     }
 }
+*/

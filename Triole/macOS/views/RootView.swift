@@ -8,12 +8,17 @@
 import SwiftUI
 
 
+enum NavigationItem {
+    case all
+    case favorites
+}
 
 struct RootView: View {
     @ObservedObject var radioStationManagmentObject: RadioController
     
     @State var selection: NavigationItem? = .all
     
+    @State private var text = ""
     // sideBar as a variable. Has to be added to main View
     var sideBar: some View {
         List(selection: $selection) {
@@ -28,7 +33,7 @@ struct RootView: View {
             }
             .tag(NavigationItem.all)
             NavigationLink(
-              destination: Text("claro"),
+                destination: SearchView(searchTitle: "Search", text: $text ),
               tag: NavigationItem.favorites,
               selection: $selection
             ) {
@@ -48,6 +53,7 @@ struct RootView: View {
     }
     
     var body: some View {
+        
         NavigationView {
             self.sideBar
         }
