@@ -20,4 +20,8 @@ struct RadioStation: Codable {
     var languagescodes: String
     var votes: String
     var codec: String
+    
+    static func radioStationUrl() -> String {
+        return "https://nl1.api.radio-browser.info/"
+    }
 }

@@ -28,9 +28,10 @@ class RadioController: ObservableObject {
         network.delegate = self
     }
     
+    //TODO: requestData with a string argument that comes from ui
     func requestData() {
         //https://nl1.api.radio-browser.info/json/stations/byname/ser
-        self.network.getRequest(url: "https://de1.api.radio-browser.info/json/stations/byname/ser")
+        self.network.getRequest(url: RadioStation.radioStationUrl() + "json/stations/byname/ser")
     }
 }
 
